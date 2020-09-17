@@ -1,2 +1,15 @@
 ---
-# defaults file for ansible-http_proxy_client
+  
+# Set the Proxy server address value (i.e. http://1.2.3.4:3128)
+
+# Proxy server address for HTTP traffic
+# http_proxy: <address>
+
+# Proxy server address for HTTPS traffic
+# https_proxy: <address>
+
+# Proxy server address for FTP traffic
+# ftp_proxy: <address>
+
+## Addresses excluded from the traffic via HTTP Proxy
+no_proxy: "localhost,127.0.0.1"

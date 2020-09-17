@@ -1,2 +1,4 @@
 ---
-# tasks file for ansible-http_proxy_client
+- include_tasks: env.yml
+
+- include_tasks: apt.yml

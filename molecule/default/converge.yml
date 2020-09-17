@@ -1,7 +1,9 @@
 ---
 - name: Converge
   hosts: all
-  tasks:
-    - name: "Include ansible-http_proxy_client"
-      include_role:
-        name: "ansible-http_proxy_client"
+  vars:
+    http_proxy: http:1.2.3.4:123
+    https_proxy: http:1.2.3.4:123
+    ftp_proxy: http:1.2.3.4:123
+  rokes:
+        - ansible-http_proxy_client
