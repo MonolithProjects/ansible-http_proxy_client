@@ -41,6 +41,9 @@ no_proxy: "localhost,127.0.0.1"
 # Proxy server address for FTP traffic
 # ftp_proxy: <address>
 
+# Exclute environment settings from the setup
+exclude_env: no
+
 # Exclute apt from the setup
 exclude_apt: no
 ```
@@ -77,12 +80,6 @@ In this example the Ansible role will setup HTTP/HTTPS/FTP Proxy in the environm
     - ftp_proxy: http://1.2.3.4:567
   roles:
     - role: monolithprojects.http_proxy_client
-```
-
-By using tag `uninstall`, GitHub Actions runner will be removed from the host and unregistered from the GitHub repository.
-
-```bash
-ansible-playbook playbook.yml --tags uninstall
 ```
 
 ## License
