@@ -1,0 +1,28 @@
+---
+- name: Create apt config file
+  file:
+    path: /etc/apt/apt.conf.d/proxy.conf
+    state: touch
+    mode: 0600
+  when:
+    - ansible_pkg_mgr == "apt"
+
+- name: Ensure HTTP Proxy server is in apt.conf
+  lineinfile:
+    path: /etc/apt/apt.conf.d/proxy.conf
+    regexp: '^Acquire::http::Proxy'
+    line: Acquire::http::Proxy "{{ http_proxy }}";
+    mode: preserve
+  when:
+    - http_proxy is defined
+    - ansible_pkg_mgr == "apt"
+
+- name: Ensure HTTPS Proxy server is in apt.conf
+  lineinfile:
+    path: /etc/apt/apt.conf.d/proxy.conf
+    regexp: '^Acquire::https::Proxy'
+    line: Acquire::https::Proxy "{{ https_proxy }}";
+    mode: preserve
+  when:
+    - https_proxy is defined
+    - ansible_pkg_mgr == "apt"
