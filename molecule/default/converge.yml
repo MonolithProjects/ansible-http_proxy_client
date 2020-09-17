@@ -2,8 +2,8 @@
 - name: Converge
   hosts: all
   vars:
-    http_proxy: http:1.2.3.4:123
-    https_proxy: http:1.2.3.4:123
-    ftp_proxy: http:1.2.3.4:123
+    - http_proxy: http://1.2.3.4:567
+    - https_proxy: http://1.2.3.4:567
+    - ftp_proxy: http://1.2.3.4:567
   roles:
-        - ansible-http_proxy_client
+    - role: monolithprojects.http_proxy_client
