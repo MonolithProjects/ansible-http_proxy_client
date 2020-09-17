@@ -1,4 +1,6 @@
 ---
 - include_tasks: env.yml
+  when: not exclude_env
 
 - include_tasks: apt.yml
+  when: not exclude_apt
