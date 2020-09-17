@@ -41,10 +41,10 @@ no_proxy: "localhost,127.0.0.1"
 # Proxy server address for FTP traffic
 # ftp_proxy: <address>
 
-# Exclute environment settings from the setup
+# Exclude environment settings from the setup
 exclude_env: no
 
-# Exclute apt from the setup
+# Exclude apt from the setup
 exclude_apt: no
 ```
 
