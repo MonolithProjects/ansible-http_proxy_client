@@ -1,8 +1,8 @@
 # GitHub Actions Runner
 
-[![Galaxy Quality](https://img.shields.io/ansible/quality/xxxx?style=flat&logo=ansible)](https://galaxy.ansible.com/monolithprojects/http_proxy_client)
+[![Galaxy Quality](https://img.shields.io/ansible/quality/50801?style=flat&logo=ansible)](https://galaxy.ansible.com/monolithprojects/http_proxy_client)
 [![Role version](https://img.shields.io/github/v/release/MonolithProjects/ansible-http_proxy_client)](https://galaxy.ansible.com/monolithprojects/http_proxy_client)
-[![Role downloads](https://img.shields.io/ansible/role/d/xxxx)](https://galaxy.ansible.com/monolithprojects/http_proxy_client)
+[![Role downloads](https://img.shields.io/ansible/role/d/50801)](https://galaxy.ansible.com/monolithprojects/http_proxy_client)
 [![GitHub Actions](https://github.com/MonolithProjects/ansible-http_proxy_client/workflows/molecule%20test/badge.svg?branch=master)](https://github.com/MonolithProjects/ansible-http_proxy_client/actions)
 [![License](https://img.shields.io/github/license/MonolithProjects/ansible-http_proxy_client)](https://github.com/MonolithProjects/ansible-http_proxy_client/blob/master/LICENSE)
 
