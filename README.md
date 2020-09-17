@@ -12,6 +12,8 @@ This Ansible role will setup HTTP/HTTPS/FTP Proxy server client.
 
 * Support for most of the Linux distributions
 
+* Root privilegies
+
 * Weekly tested on:
   * CentOS/RHEL 7,8
   * Debian 9,10
@@ -71,7 +73,8 @@ In this example the Ansible role will setup HTTP/HTTPS/FTP Proxy in the environm
   become: yes
   vars:
     - http_proxy: http://1.2.3.4:567
-    - exclude_apt: no
+    - https_proxy: http://1.2.3.4:567
+    - ftp_proxy: http://1.2.3.4:567
   roles:
     - role: monolithprojects.http_proxy_client
 ```
