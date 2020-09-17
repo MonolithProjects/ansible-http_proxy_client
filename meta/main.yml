@@ -2,7 +2,7 @@
   galaxy_info:
     author: Michal Muransky
     role_name: http_proxy_client
-    description: Setup HTTP/HTTPS/FTP Proxy server client
+    description: Setup HTTP/HTTPS/FTP Proxy client
     company: MonolithProjects
     license: "license (MIT)"
     min_ansible_version: 2.9.8

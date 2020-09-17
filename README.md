@@ -6,7 +6,7 @@
 [![GitHub Actions](https://github.com/MonolithProjects/ansible-http_proxy_client/workflows/molecule%20test/badge.svg?branch=master)](https://github.com/MonolithProjects/ansible-http_proxy_client/actions)
 [![License](https://img.shields.io/github/license/MonolithProjects/ansible-http_proxy_client)](https://github.com/MonolithProjects/ansible-http_proxy_client/blob/master/LICENSE)
 
-This Ansible role will setup HTTP/HTTPS/FTP Proxy server client.
+This Ansible role will setup HTTP/HTTPS/FTP Proxy client.
 
 ## Requirements
 
