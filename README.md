@@ -82,6 +82,11 @@ In this example the Ansible role will setup HTTP/HTTPS/FTP Proxy in the environm
     - role: monolithprojects.http_proxy_client
 ```
 
+## What is missing
+
+* Proxy setup for git
+* Proxy setup for yarn
+
 ## License
 
 MIT
