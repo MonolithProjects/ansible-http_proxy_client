@@ -5,5 +5,5 @@
     http_proxy: http:1.2.3.4:123
     https_proxy: http:1.2.3.4:123
     ftp_proxy: http:1.2.3.4:123
-  rokes:
+  roles:
         - ansible-http_proxy_client

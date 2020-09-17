@@ -12,7 +12,7 @@
     path: /etc/apt/apt.conf.d/proxy.conf
     regexp: '^Acquire::http::Proxy'
     line: Acquire::http::Proxy "{{ http_proxy }}";
-    mode: preserve
+    mode: 0600
   when:
     - http_proxy is defined
     - ansible_pkg_mgr == "apt"
@@ -22,7 +22,7 @@
     path: /etc/apt/apt.conf.d/proxy.conf
     regexp: '^Acquire::https::Proxy'
     line: Acquire::https::Proxy "{{ https_proxy }}";
-    mode: preserve
+    mode: 0600
   when:
     - https_proxy is defined
     - ansible_pkg_mgr == "apt"
