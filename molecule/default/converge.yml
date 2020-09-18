@@ -7,4 +7,5 @@
     - https_proxy: http://1.2.3.4:567
     - ftp_proxy: http://1.2.3.4:567
   roles:
+    - role: geerlingguy.docker
     - role: ansible-http_proxy_client
