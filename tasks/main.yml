@@ -4,3 +4,6 @@
 
 - include_tasks: apt.yml
   when: not exclude_apt
+
+- include_tasks: docker_svc.yml
+  when: not exclude_docker
