@@ -4,7 +4,7 @@
     name: docker
     daemon_reload: yes
     state: restarted
-  when: ansible_facts.services.docker.service is defined
+  when: '"docker.service" in ansible_facts.services'
 
 - name: reload systemd
   become: yes
