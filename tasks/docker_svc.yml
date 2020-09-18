@@ -1,0 +1,20 @@
+---
+
+- name: Check service facts
+  service_facts:
+
+- name: Setup Proxy for Docker (service dir)
+  file:
+    path: /etc/systemd/system/docker.service.d
+    mode: 0644
+    state: directory
+
+- name: Setup Proxy for Docker (copy service environment)
+  template:
+    src: templates/docker_proxy.conf.j2
+    dest: /etc/systemd/system/docker.service.d/http-proxy.conf
+    mode: 0644
+  register: docker_svc
+  notify:
+    - reload systemd
+    - restart docker

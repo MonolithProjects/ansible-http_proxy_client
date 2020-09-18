@@ -6,7 +6,9 @@
 [![GitHub Actions](https://github.com/MonolithProjects/ansible-http_proxy_client/workflows/molecule%20test/badge.svg?branch=master)](https://github.com/MonolithProjects/ansible-http_proxy_client/actions)
 [![License](https://img.shields.io/github/license/MonolithProjects/ansible-http_proxy_client)](https://github.com/MonolithProjects/ansible-http_proxy_client/blob/master/LICENSE)
 
-This Ansible role will setup HTTP/HTTPS/FTP Proxy client.
+This Ansible role will setup HTTP/HTTPS/FTP Proxy client in the Linux system (/etc/environment), Advanced Package Tool (APT) and Docker service.
+
+**Note:** This Ansible role can run eather befor or after the Docker service is installed.
 
 ## Requirements
 
@@ -46,11 +48,14 @@ exclude_env: no
 
 # Exclude apt from the setup
 exclude_apt: no
+
+# Exclude Docker servicer from the setup
+exclude_docker: no
 ```
 
 ## Example Playbook
 
-In this example the Ansible role will setup HTTP Proxy in the environment for all users and exclude apt proxy setup.
+In this example the Ansible role will setup HTTP Proxy in the system environment, the Docker and exclude APT proxy setup.
 
 ```yaml
 ---
@@ -65,7 +70,7 @@ In this example the Ansible role will setup HTTP Proxy in the environment for al
     - role: monolithprojects.http_proxy_client
 ```
 
-In this example the Ansible role will setup HTTP/HTTPS/FTP Proxy in the environment and in apt configuration.
+In this example the Ansible role will setup HTTP/HTTPS/FTP Proxy in the system environment, in APT and Docker service.
 
 ```yaml
 ---
@@ -84,7 +89,6 @@ In this example the Ansible role will setup HTTP/HTTPS/FTP Proxy in the environm
 
 ## What is missing
 
-* Proxy setup for git
 * Proxy setup for yarn
 
 ## License
