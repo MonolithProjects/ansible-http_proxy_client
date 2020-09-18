@@ -1,4 +1,4 @@
-# GitHub Actions Runner
+# Proxy client setup (Ansible Role)
 
 [![Galaxy Quality](https://img.shields.io/ansible/quality/50801?style=flat&logo=ansible)](https://galaxy.ansible.com/monolithprojects/http_proxy_client)
 [![Role version](https://img.shields.io/github/v/release/MonolithProjects/ansible-http_proxy_client)](https://galaxy.ansible.com/monolithprojects/http_proxy_client)
