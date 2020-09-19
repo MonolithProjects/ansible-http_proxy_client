@@ -20,5 +20,5 @@ exclude_env: no
 # Exclude apt from the setup
 exclude_apt: no
 
-# Exclude Docker servicer from the setup
+# Exclude Docker services from the setup
 exclude_docker: no
