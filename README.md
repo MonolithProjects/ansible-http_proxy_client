@@ -31,7 +31,7 @@ This is a copy from `defaults/main.yml`
 ```yaml
 # Set the Proxy server address value (i.e. http://1.2.3.4:3128)
 
-## Addresses excluded from the traffic via Proxy
+# Addresses excluded from the traffic via Proxy
 no_proxy: "localhost,127.0.0.1"
 
 # Proxy server address for HTTP traffic
