@@ -12,15 +12,15 @@ This Ansible role will setup HTTP/HTTPS/FTP Proxy client in the Linux system (/e
 
 ## Requirements
 
-* Support for most of the Linux distributions
-
-* Root privilegies
+* Role works on most Linux distributions
 
 * Weekly tested on:
   * CentOS/RHEL 7,8
   * Debian 9,10
   * Fedora 31,32
   * Ubuntu 16,18,20
+
+* Root privilegies
 
 * Ansible 2.6+.
 
@@ -31,7 +31,7 @@ This is a copy from `defaults/main.yml`
 ```yaml
 # Set the Proxy server address value (i.e. http://1.2.3.4:3128)
 
-## Addresses excluded from the traffic via Proxy
+# Addresses excluded from the traffic via Proxy
 no_proxy: "localhost,127.0.0.1"
 
 # Proxy server address for HTTP traffic
@@ -49,7 +49,7 @@ exclude_env: no
 # Exclude apt from the setup
 exclude_apt: no
 
-# Exclude Docker servicer from the setup
+# Exclude Docker services from the setup
 exclude_docker: no
 ```
 
@@ -65,7 +65,7 @@ In this example the Ansible role will setup HTTP Proxy in the system environment
   become: yes
   vars:
     - http_proxy: http://1.2.3.4:567
-    - exclude_apt: no
+    - exclude_apt: yes
   roles:
     - role: monolithprojects.http_proxy_client
 ```
