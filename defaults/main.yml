@@ -22,3 +22,6 @@ exclude_apt: no
 
 # Exclude Docker services from the setup
 exclude_docker: no
+
+# Exclude Git (global) from the setup
+exclude_git: no

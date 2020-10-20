@@ -7,3 +7,6 @@
 
 - include_tasks: docker_svc.yml
   when: not exclude_docker
+
+- include_tasks: git.yml
+  when: not exclude_git

@@ -51,11 +51,14 @@ exclude_apt: no
 
 # Exclude Docker services from the setup
 exclude_docker: no
+
+# Exclude Git (global) from the setup
+exclude_git: no
 ```
 
 ## Example Playbook
 
-In this example the Ansible role will setup HTTP Proxy in the system environment, the Docker and exclude APT proxy setup.
+In this example the Ansible role will setup HTTP Proxy in the system environment, Docker, Giy and exclude APT proxy setup.
 
 ```yaml
 ---
@@ -70,7 +73,7 @@ In this example the Ansible role will setup HTTP Proxy in the system environment
     - role: monolithprojects.http_proxy_client
 ```
 
-In this example the Ansible role will setup HTTP/HTTPS/FTP Proxy in the system environment, in APT and Docker service.
+In this example the Ansible role will setup HTTP/HTTPS/FTP Proxy in the system environment, in APT, Docker service and Git.
 
 ```yaml
 ---
@@ -86,10 +89,6 @@ In this example the Ansible role will setup HTTP/HTTPS/FTP Proxy in the system e
   roles:
     - role: monolithprojects.http_proxy_client
 ```
-
-## What is missing
-
-* Proxy setup for yarn
 
 ## License
 
