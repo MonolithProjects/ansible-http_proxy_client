@@ -1,0 +1,8 @@
+---
+- name: Add a proxy server to ~/.gitconfig
+  community.general.git_config:
+    name: http.proxy
+    scope: global
+    value: "{{ https_proxy }}"
+  when:
+    - http_proxy is defined
