@@ -1,4 +1,9 @@
 ---
+- name: Check if apt config file exists
+  stat:
+    path: /etc/apt/apt.conf.d/proxy.conf
+  register: stat_result
+
 - name: Create apt config file
   file:
     path: /etc/apt/apt.conf.d/proxy.conf
@@ -6,6 +11,7 @@
     mode: 0600
   when:
     - ansible_pkg_mgr == "apt"
+    - not stat_result.stat.exists
 
 - name: Ensure HTTP Proxy server is in apt.conf
   lineinfile:
